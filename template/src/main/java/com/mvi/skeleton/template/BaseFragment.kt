@@ -26,8 +26,8 @@ abstract class BaseFragment<State, Effect, Event, ViewModel : BaseViewModel<Stat
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.viewStates().observe(viewLifecycleOwner, viewStateObserver)
-        viewModel.viewEffects().observe(viewLifecycleOwner, viewEffectObserver)
+        viewModel.viewStates().observe(this, viewStateObserver)
+        viewModel.viewEffects().observe(this, viewEffectObserver)
     }
 
     abstract fun renderViewState(viewState: State)

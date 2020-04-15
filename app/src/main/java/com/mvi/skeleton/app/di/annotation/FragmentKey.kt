@@ -1,4 +1,4 @@
-package com.mvi.skeleton.app.di.factories
+package com.mvi.skeleton.app.di.annotation
 
 import androidx.fragment.app.Fragment
 import dagger.MapKey

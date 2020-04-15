@@ -4,18 +4,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import com.mvi.skeleton.auth.databinding.AuthFragmentBinding
 import com.mvi.skeleton.template.BaseFragment
 import com.mvi.skeleton.template.Status
 import com.mvi.skeleton.template.ViewEffect
 import com.mvi.skeleton.template.ViewState
 import com.mvi.skeleton.user.User
+import javax.inject.Inject
 
-class LoginFragment: BaseFragment<ViewState<User>, ViewEffect, LoginViewEvent,
+class LoginFragment @Inject constructor(
+    loginViewModel: LoginViewModel
+): BaseFragment<ViewState<User>, ViewEffect, LoginViewEvent,
         LoginViewModel>() {
 
-    override val viewModel: LoginViewModel by viewModels()
+    override val viewModel: LoginViewModel = loginViewModel
 
     private var _binding: AuthFragmentBinding? = null
     private val binding get() = _binding!!
@@ -72,7 +74,9 @@ class LoginFragment: BaseFragment<ViewState<User>, ViewEffect, LoginViewEvent,
 
     override fun renderViewState(viewState: ViewState<User>) {
         when (viewState.status) {
-            is Status.NotFetched -> { }
+            is Status.NotFetched -> {
+                binding.progressLoader.visibility = View.GONE
+            }
             is Status.Fetching -> {
                 binding.progressLoader.visibility = View.VISIBLE
             }

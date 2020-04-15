@@ -1,14 +1,13 @@
 package com.mvi.skeleton.template
 
-import android.app.Application
 import android.util.Log
 import androidx.annotation.CallSuper
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
-open class BaseViewModel<ViewState, ViewEffect, ViewEvent>(application: Application) :
-        AndroidViewModel(application), ViewModelContract<ViewEvent> {
+open class BaseViewModel<ViewState, ViewEffect, ViewEvent> :
+        ViewModel(), ViewModelContract<ViewEvent> {
 
     private val _viewStates: MutableLiveData<ViewState> = MutableLiveData()
     fun viewStates(): LiveData<ViewState> = _viewStates

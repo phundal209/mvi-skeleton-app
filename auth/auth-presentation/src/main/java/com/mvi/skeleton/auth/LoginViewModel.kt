@@ -1,6 +1,5 @@
 package com.mvi.skeleton.auth
 
-import android.app.Application
 import androidx.lifecycle.viewModelScope
 import com.mvi.skeleton.auth.api.AuthRepository
 import com.mvi.skeleton.auth.api.AuthType
@@ -12,10 +11,9 @@ import com.mvi.skeleton.user.User
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class LoginViewModel @Inject constructor(
-    application: Application,
-    private val authRepository: AuthRepository) :
-    BaseViewModel<ViewState<User>, ViewEffect, LoginViewEvent>(application) {
+open class LoginViewModel @Inject constructor(
+    private val authRepository: AuthRepository
+) : BaseViewModel<ViewState<User>, ViewEffect, LoginViewEvent>() {
 
     init {
         viewState = ViewState(status = Status.NotFetched, datas = emptyList())
@@ -27,6 +25,8 @@ class LoginViewModel @Inject constructor(
         viewModelScope.launch {
             if (authRepository.isLoggedIn()) {
                 viewState = viewState.copy(status = Status.Fetched, data = authRepository.getUser())
+            } else {
+                viewState = viewState.copy(status = Status.NotFetched)
             }
         }
     }
