@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":auth:auth-data" external.linked.project.path="$MODULE_DIR$/../auth/auth-data" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":auth:auth-data" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":auth:auth-data" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="3.6.2" />
+        <option name="LAST_KNOWN_AGP_VERSION" value="3.6.2" />
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <afterSyncTasks>
+          <task>generateDebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res;file://$MODULE_DIR$/build/generated/res/google-services/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+        <option name="PROJECT_TYPE" value="1" />
+      </configuration>
+    </facet>
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false">
         <compilerSettings>
           <option name="additionalArguments" value="-Xallow-no-source-files -Xallow-result-return-type" />
         </compilerSettings>
         <compilerArguments>
-          <option name="destination" value="$MODULE_DIR$/../auth/auth-data/build/tmp/kotlin-classes/debug" />
-          <option name="classpath" value="$MODULE_DIR$/../auth/auth-data/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/R.jar:/Users/paul.hundal/mvi-skeleton-app/auth/auth-api/build/.transforms/168c5175e2e4eef243bf660eefbc7d3e/jetified-auth-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/a433d312456c1b951d6f784cb8ea80eb/jetified-kotlin-stdlib-jdk7-1.3.60.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/099141d9ae53aea1d665bfe0235325a7/jetified-kotlinx-coroutines-core-1.3.2.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/c6fb06f007b6d920d5250e7682a5b87e/jetified-kotlin-stdlib-1.3.60.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/693ccbf4f7353b99485c22af386feedc/jetified-kotlin-stdlib-common-1.3.60.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/2c2e52864c84588034c66e6131f059e6/jetified-annotations-13.0.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/4b64a5cb70e5785489864714bd0ced9e/jetified-firebase-analytics-17.3.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/ce88b819140dd493e198d1c0c224067b/jetified-play-services-measurement-17.3.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/d5e4fb2e4668d0144b0b582fcc1ac0d6/jetified-firebase-auth-19.3.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/5fded224550cc1d201b235f201bb1910/jetified-play-services-measurement-sdk-17.3.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/c67a011634fa8c92ee3af11faf9a4e81/jetified-firebase-auth-interop-19.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/92b2a51cf24dc9ed7e855ce96a8dd9c5/jetified-play-services-measurement-api-17.3.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/9d51585bc1b5dfd3d1c335140efb4ab4/jetified-firebase-iid-20.0.2-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/30a84208d67376388b558833383865db/jetified-firebase-iid-interop-17.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/73122501e5e30199b07fc8e65301b400/jetified-play-services-base-17.1.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/bdacf1d7aa86dd2e1af755a1c8f6af9f/jetified-firebase-common-19.3.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/9f21701b8ff3e25028633e50b117f2fe/jetified-play-services-tasks-17.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/b2c4927c1db64ec7e4dadb4a9e51e89f/jetified-play-services-measurement-impl-17.3.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/2114a92f97403c983d7b06f9e2d5685f/jetified-play-services-measurement-sdk-api-17.3.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/78b439f12f47991930d0077cf5d2354d/jetified-play-services-measurement-base-17.3.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/8d7d3674b6342193e027163331f65b88/jetified-play-services-stats-17.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/4053b0da5d17d487d779ffc9d911bdcc/jetified-firebase-measurement-connector-18.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/b8d0fd6ffba12560d5877c0f8de6a78d/jetified-play-services-ads-identifier-17.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/d4064819432ad4508a88bf766ecd168e/jetified-play-services-basement-17.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/f458dbe1c9b539394acb2e05e1694152/fragment-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/587ff745ebffaee41867bc88a8f468d1/legacy-support-core-ui-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/aca20b48c585a2f9c446363ccf015fcb/legacy-support-core-utils-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/1edffa374b36ed43bbff766a0c8e71c1/loader-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/88edb78988b8205e73f1f7c2a701dec3/viewpager-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/d66195a87d5fcd3c701558cfa7bd16dd/coordinatorlayout-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/095af0540368b0b397e5b6400f2e2b09/drawerlayout-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/5958687eb342f2cf33e102660f4e4b2b/slidingpanelayout-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/4476d2286962d37d2890a6f7ae0b036e/customview-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/d9bdca5cdf5777bcf8eb935dbf96725f/swiperefreshlayout-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/a104ad58fd9961726eaf12bb2178eb31/asynclayoutinflater-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/7cafc1305e81e93b3708fabde515aad4/core-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/e221abe0133d3a62465d291c5fcd0942/versionedparcelable-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/24f70337b415b653e814691a6bad991e/localbroadcastmanager-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/aeacf2539b38c866b8c7c2bf17b7318d/jetified-firebase-components-16.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/262fe29ca4e8e41762084fb29c9d7078/lifecycle-viewmodel-2.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/fdbe9d25338730bc2713574f46ff6840/documentfile-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/eb69ff56d6b9b2010e80646b7c37901f/print-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/db690dfe287df21f8472167b3f1dc073/lifecycle-runtime-2.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/a1073250535c37f39dd9f37286479295/interpolator-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/8c1096406403fecab6ea8be3d6156065/cursoradapter-1.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/01952398ecc0d360ecba7d88848d61e4/lifecycle-livedata-2.0.0-api.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/29a9ac75f1b65a64ed6a5ecfc79b54e6/lifecycle-livedata-core-2.0.0-api.jar:/Users/paul.hundal/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.0.0/e070ffae07452331bc5684734fce6831d531785c/lifecycle-common-2.0.0.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/5e03994427ba6e248e87f8349ea00e84/core-runtime-2.0.0-api.jar:/Users/paul.hundal/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.0.0/bb21b9a11761451b51624ac428d1f1bb5deeac38/core-common-2.0.0.jar:/Users/paul.hundal/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/1905fc5609fc9ea780de21d50f31162e/jetified-auto-value-annotations-1.6.5.jar:/Users/paul.hundal/.gradle/caches/transforms-2/files-2.1/d11ef3b643098b88329df00018135e70/jetified-javax.inject-1.jar:/Users/paul.hundal/mvi-skeleton-app/user/build/.transforms/3ff183959f94f61fd87e09dc2379a374/jetified-user.jar:/Users/paul.hundal/Library/Android/sdk/platforms/android-29/android.jar" />
+          <option name="destination" value="$MODULE_DIR$/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$MODULE_DIR$/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/R.jar:/Users/phundal/mvi-skeleton-app/auth/auth-api/build/.transforms/fbb55314b7a620791e219480b3a393f8/jetified-auth-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/a433d312456c1b951d6f784cb8ea80eb/jetified-kotlin-stdlib-jdk7-1.3.60.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/099141d9ae53aea1d665bfe0235325a7/jetified-kotlinx-coroutines-core-1.3.2.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/c6fb06f007b6d920d5250e7682a5b87e/jetified-kotlin-stdlib-1.3.60.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/693ccbf4f7353b99485c22af386feedc/jetified-kotlin-stdlib-common-1.3.60.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/2c2e52864c84588034c66e6131f059e6/jetified-annotations-13.0.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/4b64a5cb70e5785489864714bd0ced9e/jetified-firebase-analytics-17.3.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/ce88b819140dd493e198d1c0c224067b/jetified-play-services-measurement-17.3.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/d5e4fb2e4668d0144b0b582fcc1ac0d6/jetified-firebase-auth-19.3.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/5fded224550cc1d201b235f201bb1910/jetified-play-services-measurement-sdk-17.3.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/c67a011634fa8c92ee3af11faf9a4e81/jetified-firebase-auth-interop-19.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/92b2a51cf24dc9ed7e855ce96a8dd9c5/jetified-play-services-measurement-api-17.3.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/9d51585bc1b5dfd3d1c335140efb4ab4/jetified-firebase-iid-20.0.2-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/30a84208d67376388b558833383865db/jetified-firebase-iid-interop-17.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/73122501e5e30199b07fc8e65301b400/jetified-play-services-base-17.1.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/bdacf1d7aa86dd2e1af755a1c8f6af9f/jetified-firebase-common-19.3.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/9f21701b8ff3e25028633e50b117f2fe/jetified-play-services-tasks-17.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/b2c4927c1db64ec7e4dadb4a9e51e89f/jetified-play-services-measurement-impl-17.3.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/2114a92f97403c983d7b06f9e2d5685f/jetified-play-services-measurement-sdk-api-17.3.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/78b439f12f47991930d0077cf5d2354d/jetified-play-services-measurement-base-17.3.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/8d7d3674b6342193e027163331f65b88/jetified-play-services-stats-17.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/4053b0da5d17d487d779ffc9d911bdcc/jetified-firebase-measurement-connector-18.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/b8d0fd6ffba12560d5877c0f8de6a78d/jetified-play-services-ads-identifier-17.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/d4064819432ad4508a88bf766ecd168e/jetified-play-services-basement-17.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/f458dbe1c9b539394acb2e05e1694152/fragment-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/587ff745ebffaee41867bc88a8f468d1/legacy-support-core-ui-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/aca20b48c585a2f9c446363ccf015fcb/legacy-support-core-utils-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/1edffa374b36ed43bbff766a0c8e71c1/loader-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/88edb78988b8205e73f1f7c2a701dec3/viewpager-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/d66195a87d5fcd3c701558cfa7bd16dd/coordinatorlayout-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/095af0540368b0b397e5b6400f2e2b09/drawerlayout-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/5958687eb342f2cf33e102660f4e4b2b/slidingpanelayout-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/4476d2286962d37d2890a6f7ae0b036e/customview-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/d9bdca5cdf5777bcf8eb935dbf96725f/swiperefreshlayout-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/a104ad58fd9961726eaf12bb2178eb31/asynclayoutinflater-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/7cafc1305e81e93b3708fabde515aad4/core-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/e221abe0133d3a62465d291c5fcd0942/versionedparcelable-1.0.0-api.jar:/Users/phundal/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/24f70337b415b653e814691a6bad991e/localbroadcastmanager-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/aeacf2539b38c866b8c7c2bf17b7318d/jetified-firebase-components-16.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/262fe29ca4e8e41762084fb29c9d7078/lifecycle-viewmodel-2.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/fdbe9d25338730bc2713574f46ff6840/documentfile-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/eb69ff56d6b9b2010e80646b7c37901f/print-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/db690dfe287df21f8472167b3f1dc073/lifecycle-runtime-2.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/a1073250535c37f39dd9f37286479295/interpolator-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/8c1096406403fecab6ea8be3d6156065/cursoradapter-1.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/01952398ecc0d360ecba7d88848d61e4/lifecycle-livedata-2.0.0-api.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/29a9ac75f1b65a64ed6a5ecfc79b54e6/lifecycle-livedata-core-2.0.0-api.jar:/Users/phundal/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.0.0/e070ffae07452331bc5684734fce6831d531785c/lifecycle-common-2.0.0.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/5e03994427ba6e248e87f8349ea00e84/core-runtime-2.0.0-api.jar:/Users/phundal/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.0.0/bb21b9a11761451b51624ac428d1f1bb5deeac38/core-common-2.0.0.jar:/Users/phundal/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/1905fc5609fc9ea780de21d50f31162e/jetified-auto-value-annotations-1.6.5.jar:/Users/phundal/.gradle/caches/transforms-2/files-2.1/d11ef3b643098b88329df00018135e70/jetified-javax.inject-1.jar:/Users/phundal/mvi-skeleton-app/user/build/.transforms/24c77c1f8bba17274b7838dda08bf642/jetified-user.jar:/Users/phundal/Library/Android/sdk/platforms/android-29/android.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="auth-data_debug" />
@@ -28,65 +52,65 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
-    <output url="file://$MODULE_DIR$/../auth/auth-data/build/intermediates/javac/debug/classes" />
-    <output-test url="file://$MODULE_DIR$/../auth/auth-data/build/intermediates/javac/debugUnitTest/classes" />
+    <output url="file://$MODULE_DIR$/build/intermediates/javac/debug/classes" />
+    <output-test url="file://$MODULE_DIR$/build/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../auth/auth-data">
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/aidl_source_output_dir/debug/out" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/renderscript_source_output_dir/debug/out" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/res/google-services/debug" type="java-resource" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/res/rs/debug" type="java-resource" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/ap_generated_sources/debugAndroidTest/out" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/aidl_source_output_dir/debugAndroidTest/out" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/renderscript_source_output_dir/debugAndroidTest/out" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/res/rs/androidTest/debug" type="java-test-resource" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/build/generated/ap_generated_sources/debugUnitTest/out" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/debug/res" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/debug/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/debug/assets" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/debug/aidl" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/debug/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/debug/rs" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/debug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTestDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTestDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTestDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTestDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTestDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTestDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTestDebug/shaders" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/testDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/testDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/testDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/testDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/testDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/testDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/testDebug/shaders" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/main/res" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/main/assets" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/main/aidl" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/main/rs" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/main/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTest/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTest/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTest/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTest/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTest/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTest/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/androidTest/shaders" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/test/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/test/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/test/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/test/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/test/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../auth/auth-data/src/test/shaders" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/../auth/auth-data/build" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/google-services/debug" type="java-resource" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/debug" type="java-resource" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/debugAndroidTest/out" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/debugAndroidTest/out" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/debugAndroidTest/out" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/debug" type="java-test-resource" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/debugUnitTest/out" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -3,6 +3,7 @@ package com.mvi.skeleton.app
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentFactory
+import com.mvi.skeleton.app.di.factories.FragmentInjectionFactory
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector

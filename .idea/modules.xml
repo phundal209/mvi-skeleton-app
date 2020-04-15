@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="mvi-skeleton-app/app" />
+      <module fileurl="file://$PROJECT_DIR$/auth/auth.iml" filepath="$PROJECT_DIR$/auth/auth.iml" group="mvi-skeleton-app/auth" />
+      <module fileurl="file://$PROJECT_DIR$/auth/auth-api/auth-api.iml" filepath="$PROJECT_DIR$/auth/auth-api/auth-api.iml" group="mvi-skeleton-app/auth/auth-api" />
+      <module fileurl="file://$PROJECT_DIR$/auth/auth-data/auth-data.iml" filepath="$PROJECT_DIR$/auth/auth-data/auth-data.iml" group="mvi-skeleton-app/auth/auth-data" />
+      <module fileurl="file://$PROJECT_DIR$/auth/auth-presentation/auth-presentation.iml" filepath="$PROJECT_DIR$/auth/auth-presentation/auth-presentation.iml" group="mvi-skeleton-app/auth/auth-presentation" />
+      <module fileurl="file://$PROJECT_DIR$/mvi-skeleton-app.iml" filepath="$PROJECT_DIR$/mvi-skeleton-app.iml" group="mvi-skeleton-app" />
+      <module fileurl="file://$PROJECT_DIR$/profile/profile.iml" filepath="$PROJECT_DIR$/profile/profile.iml" group="mvi-skeleton-app/profile" />
+      <module fileurl="file://$PROJECT_DIR$/profile/profile-api/profile-api.iml" filepath="$PROJECT_DIR$/profile/profile-api/profile-api.iml" group="mvi-skeleton-app/profile/profile-api" />
+      <module fileurl="file://$PROJECT_DIR$/template/template.iml" filepath="$PROJECT_DIR$/template/template.iml" group="mvi-skeleton-app/template" />
+      <module fileurl="file://$PROJECT_DIR$/user/user.iml" filepath="$PROJECT_DIR$/user/user.iml" group="mvi-skeleton-app/user" />
+    </modules>
+  </component>
+</project>
