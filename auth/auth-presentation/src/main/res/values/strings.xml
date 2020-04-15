@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_hint">Enter Email</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="welcome_text">Welcome To My App :)</string>
+    <string name="create_account">Create Account</string>
+    <string name="have_account_login">Have an account? Login</string>
+</resources>

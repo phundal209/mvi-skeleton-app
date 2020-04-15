@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion deps.buildConfig.compileSdkVersion
+    buildToolsVersion deps.buildConfig.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.mvi.skeleton.app"
+        minSdkVersion deps.buildConfig.minSdkVersion
+        targetSdkVersion deps.buildConfig.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner deps.buildConfig.androidJUnitRunner
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.external.kotlinStndLib
+    implementation deps.external.appCompat
+    implementation deps.external.coreKtx
+
+    implementation deps.square.dagger
+    implementation deps.square.daggerandroid
+    implementation deps.square.daggerandroidsupport
+
+    kapt deps.kapt.daggerCompiler
+    kapt deps.kapt.daggerProcessor
+
+    implementation deps.navigation.navigationFragment
+    implementation deps.navigation.navigationUiKtx
+    implementation deps.navigation.navigationDyanmic
+
+    implementation deps.google.analytics
+    implementation deps.google.auth
+
+    api project(":auth:auth-api")
+    api project(":auth:auth-data")
+    api project(":auth:auth-presentation")
+
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.androidxjunit
+    androidTestImplementation deps.test.espressocore
+
+
+}

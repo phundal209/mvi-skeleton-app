@@ -1,0 +1,106 @@
+def versions = [
+        kotlinVersion       : '1.3.60',
+        daggerVersion       : '2.26',
+        retrofitVersion     : '2.6.1',
+        okHttpVersion       : '4.3.1',
+        gradle              : '3.6.2',
+        moshi               : '1.9.2',
+        fragment            : '1.2.4',
+        livedata            : '2.2.0',
+        inject              : '1',
+        fragmentnavigation  : '2.3.0-alpha04',
+        timber              : '4.1.2',
+        firebase            : '4.3.3',
+        firebaseanalytics   : '17.3.0',
+        firebaseauth        : '19.3.0',
+        mockito             : '2.28.2',
+        lifecycleext        : '2.0.0',
+        material            : '1.2.0-alpha05',
+        coroutines          : '1.3.2',
+]
+
+def androidx = [
+        fragment             : "androidx.fragment:fragment-ktx:${versions.fragment}",
+]
+
+def build = [
+        androidKotlin        : "com.android.tools.build:gradle:${versions.gradle}",
+        kotlinGradle         : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlinVersion}",
+        navArgs              : "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.fragmentnavigation}",
+]
+
+def buildConfig = [
+        compileSdkVersion : 29,
+        minSdkVersion     : 21,
+        targetSdkVersion  : 29,
+        buildToolsVersion : "29.0.3",
+        javaVersion       : '1.8',
+        androidJUnitRunner: 'androidx.test.runner.AndroidJUnitRunner',
+
+]
+
+def external = [
+        kotlinStndLib         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlinVersion}",
+        moshi                 : "",
+        timber                : "com.jakewharton.timber:timber:${versions.timber}",
+        appCompat             : 'androidx.appcompat:appcompat:1.1.0',
+        coreKtx               : 'androidx.core:core-ktx:1.2.0',
+        inject                : "javax.inject:javax.inject:${versions.inject}",
+        lifecycleext          : "androidx.lifecycle:lifecycle-extensions:${versions.lifecycleext}",
+        lifecyclecompiler     : "androidx.lifecycle:lifecycle-compiler:${versions.lifecycleext}",
+        materialDesign        : "com.google.android.material:material:${versions.material}",
+        coroutines            : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}",
+]
+
+def test = [
+        junit                 : 'junit:junit:4.12',
+        androidxjunit         : 'androidx.test.ext:junit:1.1.1',
+        espressocore          : 'androidx.test.espresso:espresso-core:3.2.0',
+        mockito               : "org.mockito:mockito-core:${versions.mockito}"
+]
+
+def square = [
+        okHttp                  : "com.squareup.okhttp3:okhttp:${versions.okHttpVersion}",
+        okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${versions.okHttpVersion}",
+        retrofitRxJava          : "com.squareup.retrofit2:adapter-rxjava:${versions.retrofitVersion}",
+        retrofitRxJava2         : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofitVersion}",
+        retrofit                : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
+        dagger                  : "com.google.dagger:dagger:${versions.daggerVersion}",
+        daggerandroid           : "com.google.dagger:dagger-android:${versions.daggerVersion}",
+        daggerandroidsupport    : "com.google.dagger:dagger:dagger-android-support${versions.daggerVersion}",
+        moshi                   : "com.squareup.moshi:moshi:{versions.moshi}"
+
+]
+
+def navigation = [
+        navigationFragment     : "androidx.navigation:navigation-fragment-ktx:${versions.fragmentnavigation}",
+        navigationUiKtx        : "androidx.navigation:navigation-ui-ktx:${versions.fragmentnavigation}",
+        navigationDyanmic      : "androidx.navigation:navigation-dynamic-features-fragment:${versions.fragmentnavigation}"
+]
+
+def firebase = [
+        googleServices        : "com.google.gms:google-services:${versions.firebase}",
+        analytics             : "com.google.firebase:firebase-analytics:${versions.firebaseanalytics}",
+        auth                  : "com.google.firebase:firebase-auth:${versions.firebaseauth}"
+]
+
+def kapt = [
+        daggerCompiler : "com.google.dagger:dagger-compiler:${versions.daggerVersion}",
+        daggerProcessor: "com.google.dagger:dagger-android-processor:${versions.daggerVersion}",
+        moshiKapt      : "com.squareup.moshi:moshi-kotlin-codegen:${versions.moshi}"
+]
+
+ext.deps = [
+        "plugins"     : plugins,
+        "repositories": repositories,
+        "build"       : build,
+        "buildConfig" : buildConfig,
+        "androidx"    : androidx,
+        "external"    : external,
+        "kapt"        : kapt,
+        "square"      : square,
+        "versions"    : versions,
+        "test"        : test,
+        "navigation"  : navigation,
+        "google"      : firebase,
+]

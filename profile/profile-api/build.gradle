@@ -1,0 +1,23 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.external.kotlinStndLib
+
+    api project(":user")
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.freeCompilerArgs = ["-Xallow-result-return-type"]
+
+
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.freeCompilerArgs = ["-Xallow-result-return-type"]
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

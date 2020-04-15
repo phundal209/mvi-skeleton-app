@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion deps.buildConfig.compileSdkVersion
+    buildToolsVersion deps.buildConfig.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion deps.buildConfig.minSdkVersion
+        targetSdkVersion deps.buildConfig.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner deps.buildConfig.androidJUnitRunner
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    kotlinOptions {
+        freeCompilerArgs = ["-Xallow-result-return-type"]
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.external.kotlinStndLib
+    implementation deps.google.analytics
+    implementation deps.google.auth
+    implementation deps.external.inject
+    implementation deps.external.coroutines
+
+
+    api project(":auth:auth-api")
+
+    testImplementation deps.test.junit
+    testImplementation deps.test.mockito
+    androidTestImplementation deps.test.androidxjunit
+    androidTestImplementation deps.test.espressocore
+}
