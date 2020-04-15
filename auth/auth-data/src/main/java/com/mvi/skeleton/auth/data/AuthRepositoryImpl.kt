@@ -3,10 +3,7 @@ package com.mvi.skeleton.auth.data
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.mvi.skeleton.auth.api.AuthRepository
-import com.mvi.skeleton.auth.api.AuthException
-import com.mvi.skeleton.auth.api.AuthExceptionType
-import com.mvi.skeleton.auth.api.AuthType
+import com.mvi.skeleton.auth.api.*
 import com.mvi.skeleton.user.User
 import javax.inject.Inject
 
@@ -18,15 +15,16 @@ class AuthRepositoryImpl @Inject constructor(
         return auth.currentUser != null
     }
 
-    override suspend fun loginOrCreate(email: String, password: String, authType: AuthType): Result<User> {
+    override suspend fun loginOrCreate(email: String, password: String,
+                                       authType: AuthType, authCallback: AuthCallback<User>) {
         return when (authType) {
             AuthType.CREATE_ACCOUNT -> {
                 val task = auth.signInWithEmailAndPassword(email, password)
-                handleAuthResult(task, email)
+                handleAuthResult(task, email, authCallback)
             }
             AuthType.LOGIN -> {
                 val task = auth.createUserWithEmailAndPassword(email, password)
-                handleAuthResult(task, email)
+                handleAuthResult(task, email, authCallback)
             }
         }
     }
@@ -36,42 +34,32 @@ class AuthRepositoryImpl @Inject constructor(
         return true
     }
 
-    override suspend fun deleteUser(): Result<Boolean> {
+    override suspend fun deleteUser(authCallback: AuthCallback<Boolean>) {
         val deleteTask = auth.currentUser?.delete()
-        var result: Result<Boolean> = Result.failure(UninitializedPropertyAccessException("user is null"))
         deleteTask?.addOnSuccessListener {
-            result = Result.success(true)
+            authCallback.onSuccess(true)
         }
         deleteTask?.addOnFailureListener {
-            result = Result.failure(AuthException(it.message ?: "failure", AuthExceptionType.FAILED))
+            authCallback.onFailure(AuthException(it.message ?: "failure", AuthExceptionType.FAILED))
         }
         deleteTask?.addOnCanceledListener {
-            result = Result.failure(AuthException("cancelled deletion", AuthExceptionType.CANCELLED))
+            authCallback.onFailure(AuthException("cancelled deletion", AuthExceptionType.CANCELLED))
         }
-        deleteTask?.addOnCompleteListener {
-            result = Result.failure(AuthException("completed but not deleted", AuthExceptionType.COMPLETED))
-        }
-        return result
     }
 
     override suspend fun getUser(): User =
         User(auth.currentUser?.uid?: "", auth.currentUser?.email?: "")
 
-    private fun handleAuthResult(authResult: Task<AuthResult>, email: String): Result<User> {
-        var result: Result<User> = Result.failure(UninitializedPropertyAccessException("auth not init"))
+    private fun handleAuthResult(authResult: Task<AuthResult>, email: String, authCallback: AuthCallback<User>) {
         authResult.addOnSuccessListener {
             val user = User(it.user?.uid ?: "", email)
-            result = Result.success(user)
+            authCallback.onSuccess(user)
         }
         authResult.addOnCanceledListener {
-            result = Result.failure(AuthException("cancelled", AuthExceptionType.CANCELLED))
+            authCallback.onFailure(AuthException("cancelled", AuthExceptionType.CANCELLED))
         }
         authResult.addOnFailureListener {
-            result = Result.failure(AuthException(it.message ?: "failure", AuthExceptionType.FAILED))
+            authCallback.onFailure(AuthException(it.message ?: "failure", AuthExceptionType.FAILED))
         }
-        authResult.addOnCompleteListener {
-            result = Result.failure(AuthException("completed, but not successful", AuthExceptionType.COMPLETED))
-        }
-        return result
     }
 }

@@ -1,6 +1,8 @@
 package com.mvi.skeleton.auth
 
 import androidx.lifecycle.viewModelScope
+import com.mvi.skeleton.auth.api.AuthCallback
+import com.mvi.skeleton.auth.api.AuthException
 import com.mvi.skeleton.auth.api.AuthRepository
 import com.mvi.skeleton.auth.api.AuthType
 import com.mvi.skeleton.template.BaseViewModel
@@ -23,10 +25,10 @@ open class LoginViewModel @Inject constructor(
     private fun initAuth() {
         viewState = viewState.copy(status = Status.Fetching)
         viewModelScope.launch {
-            if (authRepository.isLoggedIn()) {
-                viewState = viewState.copy(status = Status.Fetched, data = authRepository.getUser())
+            viewState = if (authRepository.isLoggedIn()) {
+                viewState.copy(status = Status.Fetched, data = authRepository.getUser())
             } else {
-                viewState = viewState.copy(status = Status.NotFetched)
+                viewState.copy(status = Status.NotFetched)
             }
         }
     }
@@ -46,15 +48,20 @@ open class LoginViewModel @Inject constructor(
     private fun handleLoginClicked(email: String, password: String, authType: AuthType) {
         viewState = viewState.copy(status = Status.Fetching)
         viewModelScope.launch {
-            val result = authRepository.loginOrCreate(email, password, authType)
-            result.onSuccess {
-                viewState = viewState.copy(status = Status.Fetched, data = it)
-                viewEffect = ViewEffect.ShowToast("Already logged in with $email")
-            }
-            result.onFailure {
-                viewState = viewState.copy(status = Status.ErrorFetching(it.message?: "Error, please try again"))
-                viewEffect = ViewEffect.ShowSnackbar(it.message?: "Error, please try again")
-            }
+            authRepository.loginOrCreate(email, password, authType, authCallback)
         }
+    }
+
+    private val authCallback: AuthCallback<User> = object : AuthCallback<User> {
+        override fun onSuccess(result: User) {
+            viewState = viewState.copy(status = Status.Fetched, data = result)
+            viewEffect = ViewEffect.ShowSnackbar("Logged in with ${result.email}")
+        }
+
+        override fun onFailure(exception: AuthException) {
+            viewState = viewState.copy(status = Status.ErrorFetching(exception.message?: "Error, please try again"))
+            viewEffect = ViewEffect.ShowSnackbar(exception.message?: "Error, please try again")
+        }
+
     }
 }

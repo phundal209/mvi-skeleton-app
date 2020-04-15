@@ -56,15 +56,22 @@ class LoginFragment @Inject constructor(
         }
         binding.signUpButton.setOnClickListener {
             if (loginPageState == LoginPageState.LoginOrSignUp) {
+                clearText()
                 binding.submitButton.text = context?.getString(R.string.create_account)
                 binding.signUpButton.text = context?.getString(R.string.have_account_login)
                 loginPageState = LoginPageState.CreateOrLogin
             } else if (loginPageState == LoginPageState.CreateOrLogin) {
+                clearText()
                 binding.submitButton.text = context?.getString(R.string.login)
                 binding.signUpButton.text = context?.getString(R.string.signup)
                 loginPageState = LoginPageState.LoginOrSignUp
             }
         }
+    }
+
+    private fun clearText() {
+        binding.emailTextView.setText("")
+        binding.passwordTextView.setText("")
     }
 
     override fun onDestroyView() {
