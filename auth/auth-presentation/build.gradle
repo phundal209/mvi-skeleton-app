@@ -48,6 +48,5 @@ dependencies {
     implementation deps.external.materialDesign
 
     api project(":template")
-    api project(":user")
     api project(":auth:auth-api")
 }

@@ -4,7 +4,6 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.mvi.skeleton.auth.api.*
-import com.mvi.skeleton.user.User
 import javax.inject.Inject
 
 class AuthRepositoryImpl @Inject constructor(

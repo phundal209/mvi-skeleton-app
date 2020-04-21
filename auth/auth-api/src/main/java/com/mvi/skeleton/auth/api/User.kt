@@ -1,4 +1,4 @@
-package com.mvi.skeleton.user
+package com.mvi.skeleton.auth.api
 
 data class User(
     val uid: String,

@@ -1,15 +1,11 @@
 package com.mvi.skeleton.auth
 
 import androidx.lifecycle.viewModelScope
-import com.mvi.skeleton.auth.api.AuthCallback
-import com.mvi.skeleton.auth.api.AuthException
-import com.mvi.skeleton.auth.api.AuthRepository
-import com.mvi.skeleton.auth.api.AuthType
+import com.mvi.skeleton.auth.api.*
 import com.mvi.skeleton.template.BaseViewModel
 import com.mvi.skeleton.template.Status
 import com.mvi.skeleton.template.ViewEffect
 import com.mvi.skeleton.template.ViewState
-import com.mvi.skeleton.user.User
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.mvi.skeleton.auth.api.User
 import com.mvi.skeleton.auth.databinding.AuthFragmentBinding
 import com.mvi.skeleton.template.BaseFragment
 import com.mvi.skeleton.template.Status
 import com.mvi.skeleton.template.ViewEffect
 import com.mvi.skeleton.template.ViewState
-import com.mvi.skeleton.user.User
 import javax.inject.Inject
 
 class LoginFragment @Inject constructor(
